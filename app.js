@@ -424,7 +424,7 @@ function removeFromLibrary(id) {
 function addToPlaylist(title, url) {
     myList.push({ id: generateQueueId(), title, url });
     localStorage.setItem('parlantia_playlist', JSON.stringify(myList));
-    showToast("Añadido a la cola");
+    showToast("Añadido a la lista");
     refreshActiveViews();
 }
 
@@ -446,7 +446,7 @@ function drop(e, dropIndex) {
 function renderPlaylist() {
     const container = document.getElementById('playlist-container');
     if (!myList.length) {
-        container.innerHTML = `<div class="empty-state"><h2 class="empty-title">Tu cola está vacía</h2><button onclick="showTab('search')" class="btn-massive">🔍 Buscar</button></div>`;
+        container.innerHTML = `<div class="empty-state"><h2 class="empty-title">Tu lista está vacía</h2><button onclick="showTab('search')" class="btn-massive">🔍 Buscar</button></div>`;
         updatePlayerButtons(); return;
     }
 
