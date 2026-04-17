@@ -1,0 +1,43 @@
+[
+  {
+    "id": "jm-nm",
+    "title": "Nuestra América",
+    "author": "José Martí",
+    "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_na.jpg",
+    "audioUrl": "https://syalia.com/parlantia/audiobooks/Nuestra_América-MONO-64k.m4b" 
+  },
+  {
+    "id": "jm-is",
+    "title": "Ismaelillo",
+    "author": "José Martí",
+    "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_is.jpg",
+    "units": [
+      { "title": "Dedicatoria", "audioUrl": "https://syalia.com/parlantia/audiobooks/00-ISM-Dedicatoria-MONO-64k.mp3" },
+      { "title": "Príncipe Enano", "audioUrl": "https://syalia.com/parlantia/audiobooks/01-ISM-Príncipe_Enano-MONO-64k.mp3" },
+      { "title": "Sueño Despierto", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-ISM-Sueño_Despierto-MONO-64k.mp3" }
+    ]
+  },
+  {
+    "id": "js-eo",
+    "title": "La Edad de Oro",
+    "author": "José Martí",
+    "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo.jpg",
+    "parts": [
+      {
+        "title": "Número 1",
+        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_is_1.png",
+        "units": [
+          { "title": "A los niños que lean la Edad de Oro", "audioUrl": "https://syalia.com/parlantia/audiobooks/01-LEDO-A_los_niños_que_lean_La_Edad_de_Oro-MONO-64k.mp3" },
+          { "title": "Tres Héroes", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-LEDO-Tres_Héroes-MONO-64k.mp3" }
+        ]
+      },
+      {
+        "title": "Número 2",
+        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_is_2.png",
+        "units": [
+          { "title": "La Historia del Hombre, contada por sus casas", "audioUrl": "https://syalia.com/parlantia/audiobooks/10-LEDO-La%20Historia%20del%20Hombre,%20Contada%20por%20Sus%20Casas-MONO-64k.mp3" }
+        ]
+      }
+    ]
+  }
+]
