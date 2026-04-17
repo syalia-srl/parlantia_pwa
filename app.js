@@ -767,7 +767,7 @@ async function clearAudioCache() {
 }
 
 
-if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js')); }
+
 
 // Cuenta cuántas veces aparece una URL (o un libro) en la cola
 function getQueueCount(url) {
@@ -912,4 +912,6 @@ function showParlantiaModal(title, message, confirmText, isDestructive, onConfir
 function closeModal() {
     document.getElementById('parlantia-modal').style.display = 'none';
 }
+
+if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('sw.js')); }
 

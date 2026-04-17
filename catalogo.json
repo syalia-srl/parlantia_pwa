@@ -18,6 +18,17 @@
     ]
   },
   {
+    "id": "jm-vs",
+    "title": "Versos Sencillos",
+    "author": "José Martí",
+    "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_vs.jpg",
+    "units": [
+      { "title": "Dedicatoria", "audioUrl": "https://syalia.com/parlantia/audiobooks/00-ISM-Dedicatoria-MONO-64k.mp3" },
+      { "title": "Príncipe Enano", "audioUrl": "https://syalia.com/parlantia/audiobooks/01-ISM-Príncipe_Enano-MONO-64k.mp3" },
+      { "title": "Sueño Despierto", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-ISM-Sueño_Despierto-MONO-64k.mp3" }
+    ]
+  },
+  {
     "id": "js-eo",
     "title": "La Edad de Oro",
     "author": "José Martí",
