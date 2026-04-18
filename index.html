@@ -26,8 +26,13 @@
 
 <body>
 
-    <header>
+    <header style="position: relative;">
         <img src="assets/logo.png" alt="Parlantia" class="logo">
+        
+        <div id="network-indicator" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-size: 0.75rem; font-weight: bold; display: flex; align-items: center; gap: 6px; color: var(--text-muted);">
+            <span id="network-dot" style="width: 10px; height: 10px; border-radius: 50%; background: #4CAF50; box-shadow: 0 0 5px rgba(0,0,0,0.2);"></span>
+            <span id="network-text">Online</span>
+        </div>
     </header>
 
     <div id="toast-container"></div>
