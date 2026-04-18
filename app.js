@@ -208,7 +208,7 @@ function renderRow(title, url) {
                 </div>
             </div>
             <div style="display:flex; gap:8px;">
-                <button class="btn-small" onclick="playTrack('${url}','${title}')">▶️</button>
+                <button class="btn-small" onclick="playFromCatalog('${url}','${title}')">▶️</button>
                 <button class="btn-small" onclick="addToPlaylist('${title}','${url}')">➕</button>
             </div>
         </div>`;
@@ -911,6 +911,27 @@ function showParlantiaModal(title, message, confirmText, isDestructive, onConfir
 
 function closeModal() {
     document.getElementById('parlantia-modal').style.display = 'none';
+}
+
+// --- NUEVA FUNCIÓN: Inyector de Audios desde el Catálogo ---
+function playFromCatalog(url, title) {
+    // 1. Creamos un ID único para esta instancia en la cola
+    const newId = generateQueueId();
+
+    // 2. Añadimos la pista exactamente al final de Mi Lista
+    myList.push({ id: newId, title: title, url: url });
+    
+    // 3. Guardamos en la memoria del teléfono para no perderlo
+    localStorage.setItem('parlantia_playlist', JSON.stringify(myList));
+
+    // 4. Llamamos a tu reproductor oficial. 
+    // Al pasarle el nuevo ID, ya no es un "fantasma".
+    // Nota: playTrack automáticamente pausa lo que estaba sonando al cambiar el src.
+    playTrack(url, title, newId);
+
+    // 5. Refrescamos la vista para que el usuario vea el cambio si está en ese Tab
+    showToast("Reproduciendo y añadido a tu lista");
+    refreshActiveViews();
 }
 
 if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('sw.js')); }
