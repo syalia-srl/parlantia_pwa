@@ -4,7 +4,7 @@
     "title": "Nuestra América",
     "author": "José Martí",
     "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_na.jpg",
-    "audioUrl": "https://syalia.com/parlantia/audiobooks/Nuestra_América-MONO-64k.m4b" 
+    "audioUrl": "https://syalia.com/parlantia/audiobooks/Nuestra_América-MONO-64k.m4b"
   },
   {
     "id": "jm-is",
@@ -12,22 +12,70 @@
     "author": "José Martí",
     "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_is.jpg",
     "units": [
-      { "title": "Dedicatoria", "audioUrl": "https://syalia.com/parlantia/audiobooks/00-ISM-Dedicatoria-MONO-64k.mp3" },
-      { "title": "Príncipe Enano", "audioUrl": "https://syalia.com/parlantia/audiobooks/01-ISM-Príncipe_Enano-MONO-64k.mp3" },
-      { "title": "Sueño Despierto", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-ISM-Sueño_Despierto-MONO-64k.mp3" },
-      { "title": "Brazos Fragantes", "audioUrl": "https://syalia.com/parlantia/audiobooks/03-ISM-Brazos_Fragantes-MONO-64k.mp3" },
-      { "title": "Mi Caballero", "audioUrl": "https://syalia.com/parlantia/audiobooks/04-ISM-Mi_Caballero-MONO-64k.mp3" },
-      { "title": "Musa Traviesa", "audioUrl": "https://syalia.com/parlantia/audiobooks/05-ISM-Musa_Traviesa-MONO-64k.mp3" },
-      { "title": "Mi Reyecillo", "audioUrl": "https://syalia.com/parlantia/audiobooks/06-ISM-Mi_Reyecillo-MONO-64k.mp3" },
-      { "title": "Penachos Vívidos", "audioUrl": "https://syalia.com/parlantia/audiobooks/07-ISM-Penachos_Vívidos-MONO-64k.mp3" },
-      { "title": "Hijo del Alma", "audioUrl": "https://syalia.com/parlantia/audiobooks/08-ISM-Hijo_del_alma-MONO-64k.mp3" },
-      { "title": "Amor Errante", "audioUrl": "https://syalia.com/parlantia/audiobooks/09-ISM-Amor_Errante-MONO-64k.mp3" },
-      { "title": "Sobre mi Hombro", "audioUrl": "https://syalia.com/parlantia/audiobooks/10-ISM-Sobre_mi_Hombro-MONO-64k.mp3" },
-      { "title": "Tábanos Fieros", "audioUrl": "https://syalia.com/parlantia/audiobooks/11-ISM-Tábanos_Fieros-MONO-64k.mp3" },
-      { "title": "Tórtola Blanca", "audioUrl": "https://syalia.com/parlantia/audiobooks/12-ISM-Tórtola_Blanca-MONO-64k.mp3" },
-      { "title": "Valle Lozano", "audioUrl": "https://syalia.com/parlantia/audiobooks/13-ISM-Valle_Lozano-MONO-64k.mp3" },
-      { "title": "Mi Despensero", "audioUrl": "https://syalia.com/parlantia/audiobooks/14-ISM-Mi_Despensero-MONO-64k.mp3" },
-      { "title": "Rosilla Nueva", "audioUrl": "https://syalia.com/parlantia/audiobooks/15-ISM-Rosilla_Nueva-MONO-64k.mp3" }
+      {
+        "title": "Dedicatoria",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/00-ISM-Dedicatoria-MONO-64k.mp3"
+      },
+      {
+        "title": "Príncipe Enano",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/01-ISM-Príncipe_Enano-MONO-64k.mp3"
+      },
+      {
+        "title": "Sueño Despierto",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/02-ISM-Sueño_Despierto-MONO-64k.mp3"
+      },
+      {
+        "title": "Brazos Fragantes",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/03-ISM-Brazos_Fragantes-MONO-64k.mp3"
+      },
+      {
+        "title": "Mi Caballero",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/04-ISM-Mi_Caballero-MONO-64k.mp3"
+      },
+      {
+        "title": "Musa Traviesa",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/05-ISM-Musa_Traviesa-MONO-64k.mp3"
+      },
+      {
+        "title": "Mi Reyecillo",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/06-ISM-Mi_Reyecillo-MONO-64k.mp3"
+      },
+      {
+        "title": "Penachos Vívidos",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/07-ISM-Penachos_Vívidos-MONO-64k.mp3"
+      },
+      {
+        "title": "Hijo del Alma",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/08-ISM-Hijo_del_alma-MONO-64k.mp3"
+      },
+      {
+        "title": "Amor Errante",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/09-ISM-Amor_Errante-MONO-64k.mp3"
+      },
+      {
+        "title": "Sobre mi Hombro",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/10-ISM-Sobre_mi_Hombro-MONO-64k.mp3"
+      },
+      {
+        "title": "Tábanos Fieros",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/11-ISM-Tábanos_Fieros-MONO-64k.mp3"
+      },
+      {
+        "title": "Tórtola Blanca",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/12-ISM-Tórtola_Blanca-MONO-64k.mp3"
+      },
+      {
+        "title": "Valle Lozano",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/13-ISM-Valle_Lozano-MONO-64k.mp3"
+      },
+      {
+        "title": "Mi Despensero",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/14-ISM-Mi_Despensero-MONO-64k.mp3"
+      },
+      {
+        "title": "Rosilla Nueva",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/15-ISM-Rosilla_Nueva-MONO-64k.mp3"
+      }
     ]
   },
   {
@@ -36,53 +84,194 @@
     "author": "José Martí",
     "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_vs.jpg",
     "units": [
-      { "title": "Dedicatoria", "audioUrl": "https://syalia.com/parlantia/audiobooks/00-VS-Dedicatoria-MONO-64k.mp3" },
-      { "title": "Poema I", "audioUrl": "https://syalia.com/parlantia/audiobooks/01-VS-Poema_I-MONO-64k.mp3" },
-      { "title": "Poema II", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-VS-Poema_II-MONO-64k.mp3" },
-      { "title": "Poema III", "audioUrl": "https://syalia.com/parlantia/audiobooks/03-VS-Poema_III-MONO-64k.mp3" },
-      { "title": "Poema IV", "audioUrl": "https://syalia.com/parlantia/audiobooks/04-VS-Poema_IV-MONO-64k.mp3" },
-      { "title": "Poema V", "audioUrl": "https://syalia.com/parlantia/audiobooks/05-VS-Poema_V-MONO-64k.mp3" },
-      { "title": "Poema VI", "audioUrl": "https://syalia.com/parlantia/audiobooks/06-VS-Poema_VI-MONO-64k.mp3" },
-      { "title": "Poema VII", "audioUrl": "https://syalia.com/parlantia/audiobooks/07-VS-Poema_VII-MONO-64k.mp3" },
-      { "title": "Poema VIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/08-VS-Poema_VIII-MONO-64k.mp3" },
-      { "title": "Poema IX", "audioUrl": "https://syalia.com/parlantia/audiobooks/09-VS-Poema_IX-MONO-64k.mp3" },
-      { "title": "Poema X", "audioUrl": "https://syalia.com/parlantia/audiobooks/10-VS-Poema_X-MONO-64k.mp3" },
-      { "title": "Poema XI", "audioUrl": "https://syalia.com/parlantia/audiobooks/11-VS-Poema_XI-MONO-64k.mp3" },
-      { "title": "Poema XII", "audioUrl": "https://syalia.com/parlantia/audiobooks/12-VS-Poema_XII-MONO-64k.mp3" },
-      { "title": "Poema XIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/13-VS-Poema_XIII-MONO-64k.mp3" },
-      { "title": "Poema XIV", "audioUrl": "https://syalia.com/parlantia/audiobooks/14-VS-Poema_XIV-MONO-64k.mp3" },
-      { "title": "Poema XV", "audioUrl": "https://syalia.com/parlantia/audiobooks/15-VS-Poema_XV-MONO-64k.mp3" },
-      { "title": "Poema XVI", "audioUrl": "https://syalia.com/parlantia/audiobooks/16-VS-Poema_XVI-MONO-64k.mp3" },
-      { "title": "Poema XVII", "audioUrl": "https://syalia.com/parlantia/audiobooks/17-VS-Poema_XVII-MONO-64k.mp3" },
-      { "title": "Poema XVIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/18-VS-Poema_XVIII-MONO-64k.mp3" },
-      { "title": "Poema XIX", "audioUrl": "https://syalia.com/parlantia/audiobooks/19-VS-Poema_XIX-MONO-64k.mp3" },
-      { "title": "Poema XX", "audioUrl": "https://syalia.com/parlantia/audiobooks/20-VS-Poema_XX-MONO-64k.mp3" },
-      { "title": "Poema XXI", "audioUrl": "https://syalia.com/parlantia/audiobooks/21-VS-Poema_XXI-MONO-64k.mp3" },
-      { "title": "Poema XXII", "audioUrl": "https://syalia.com/parlantia/audiobooks/22-VS-Poema_XXII-MONO-64k.mp3" },
-      { "title": "Poema XXIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/23-VS-Poema_XXIII-MONO-64k.mp3" },
-      { "title": "Poema XXIV", "audioUrl": "https://syalia.com/parlantia/audiobooks/24-VS-Poema_XXIV-MONO-64k.mp3" },
-      { "title": "Poema XXV", "audioUrl": "https://syalia.com/parlantia/audiobooks/25-VS-Poema_XXV-MONO-64k.mp3" },
-      { "title": "Poema XXVI", "audioUrl": "https://syalia.com/parlantia/audiobooks/26-VS-Poema_XXVI-MONO-64k.mp3" },
-      { "title": "Poema XXVII", "audioUrl": "https://syalia.com/parlantia/audiobooks/27-VS-Poema_XXVII-MONO-64k.mp3" },
-      { "title": "Poema XVIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/28-VS-Poema_XXVIII-MONO-64k.mp3" },
-      { "title": "Poema XXIX", "audioUrl": "https://syalia.com/parlantia/audiobooks/29-VS-Poema_XXIX-MONO-64k.mp3" },
-      { "title": "Poema XXX", "audioUrl": "https://syalia.com/parlantia/audiobooks/30-VS-Poema_XXX-MONO-64k.mp3" },
-      { "title": "Poema XXXI", "audioUrl": "https://syalia.com/parlantia/audiobooks/31-VS-Poema_XXXI-MONO-64k.mp3" },
-      { "title": "Poema XXXII", "audioUrl": "https://syalia.com/parlantia/audiobooks/32-VS-Poema_XXXII-MONO-64k.mp3" },
-      { "title": "Poema XXXIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/33-VS-Poema_XXXIII-MONO-64k.mp3" },
-      { "title": "Poema XXXIV", "audioUrl": "https://syalia.com/parlantia/audiobooks/34-VS-Poema_XXXIV-MONO-64k.mp3" },
-      { "title": "Poema XXXV", "audioUrl": "https://syalia.com/parlantia/audiobooks/35-VS-Poema_XXXV-MONO-64k.mp3" },
-      { "title": "Poema XXXVI", "audioUrl": "https://syalia.com/parlantia/audiobooks/36-VS-Poema_XXXVI-MONO-64k.mp3" },
-      { "title": "Poema XXXVII", "audioUrl": "https://syalia.com/parlantia/audiobooks/37-VS-Poema_XXXVII-MONO-64k.mp3" },
-      { "title": "Poema XXXVIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/38-VS-Poema_XXXVIII-MONO-64k.mp3" },
-      { "title": "Poema XXXIX", "audioUrl": "https://syalia.com/parlantia/audiobooks/39-VS-Poema_XXXIX-MONO-64k.mp3" },
-      { "title": "Poema XL", "audioUrl": "https://syalia.com/parlantia/audiobooks/40-VS-Poema_XL-MONO-64k.mp3" },
-      { "title": "Poema XLI", "audioUrl": "https://syalia.com/parlantia/audiobooks/41-VS-Poema_XLI-MONO-64k.mp3" },
-      { "title": "Poema XLII", "audioUrl": "https://syalia.com/parlantia/audiobooks/43-VS-Poema_XLII-MONO-64k.mp3" },
-      { "title": "Poema XLIII", "audioUrl": "https://syalia.com/parlantia/audiobooks/43-VS-Poema_XLIII-MONO-64k.mp3" },
-      { "title": "Poema XLIV", "audioUrl": "https://syalia.com/parlantia/audiobooks/44-VS-Poema_XLVI-MONO-64k.mp3" },
-      { "title": "Poema XLV", "audioUrl": "https://syalia.com/parlantia/audiobooks/45-VS-Poema_XLV-MONO-64k.mp3" },
-      { "title": "Poema XLVI", "audioUrl": "https://syalia.com/parlantia/audiobooks/46-VS-Poema_XLVi-MONO-64k.mp3" }
+      {
+        "title": "Dedicatoria",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/00-VS-Dedicatoria-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema I",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/01-VS-Poema_I-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema II",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/02-VS-Poema_II-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema III",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/03-VS-Poema_III-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema IV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/04-VS-Poema_IV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema V",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/05-VS-Poema_V-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema VI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/06-VS-Poema_VI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema VII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/07-VS-Poema_VII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema VIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/08-VS-Poema_VIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema IX",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/09-VS-Poema_IX-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema X",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/10-VS-Poema_X-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/11-VS-Poema_XI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/12-VS-Poema_XII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/13-VS-Poema_XIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XIV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/14-VS-Poema_XIV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/15-VS-Poema_XV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XVI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/16-VS-Poema_XVI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XVII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/17-VS-Poema_XVII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XVIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/18-VS-Poema_XVIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XIX",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/19-VS-Poema_XIX-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XX",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/20-VS-Poema_XX-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/21-VS-Poema_XXI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/22-VS-Poema_XXII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/23-VS-Poema_XXIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXIV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/24-VS-Poema_XXIV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/25-VS-Poema_XXV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXVI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/26-VS-Poema_XXVI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXVII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/27-VS-Poema_XXVII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XVIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/28-VS-Poema_XXVIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXIX",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/29-VS-Poema_XXIX-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXX",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/30-VS-Poema_XXX-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/31-VS-Poema_XXXI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/32-VS-Poema_XXXII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/33-VS-Poema_XXXIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXIV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/34-VS-Poema_XXXIV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/35-VS-Poema_XXXV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXVI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/36-VS-Poema_XXXVI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXVII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/37-VS-Poema_XXXVII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXVIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/38-VS-Poema_XXXVIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XXXIX",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/39-VS-Poema_XXXIX-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XL",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/40-VS-Poema_XL-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XLI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/41-VS-Poema_XLI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XLII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/43-VS-Poema_XLII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XLIII",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/43-VS-Poema_XLIII-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XLIV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/44-VS-Poema_XLVI-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XLV",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/45-VS-Poema_XLV-MONO-64k.mp3"
+      },
+      {
+        "title": "Poema XLVI",
+        "audioUrl": "https://syalia.com/parlantia/audiobooks/46-VS-Poema_XLVi-MONO-64k.mp3"
+      }
     ]
   },
   {
@@ -92,18 +281,139 @@
     "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo.jpg",
     "parts": [
       {
-        "title": "Número 1",
-        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_is_1.png",
+        "title": "Volumen 1",
+        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo_1.png",
         "units": [
-          { "title": "A los niños que lean la Edad de Oro", "audioUrl": "https://syalia.com/parlantia/audiobooks/01-LEDO-A_los_niños_que_lean_La_Edad_de_Oro-MONO-64k.mp3" },
-          { "title": "Tres Héroes", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-LEDO-Tres_Héroes-MONO-64k.mp3" }
+          {
+            "title": "A los niños que lean la Edad de Oro",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/01-LEDO-A_los_niños_que_lean_La_Edad_de_Oro-MONO-64k.mp3"
+          },
+          {
+            "title": "Tres Héroes",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/02-LEDO-Tres_Héroes-MONO-64k.mp3"
+          },
+          {
+            "title": "Dos Milagros",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/03-LEDO-Dos%20Milagros-MONO-64k.mp3"
+          },
+          {
+            "title": "Meñique",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/04-LEDO-Meñique-MONO-64k.mp3"
+          },
+          {
+            "title": "Cada uno a su oficio",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/05-LEDO-Cada%20uno%20a%20su%20oficio-MONO-64k.mp3"
+          },
+          {
+            "title": "La Ilíada, de Homero",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/06-LEDO-La Ilíada,%20de%20Homero-MONO-64k.mp3"
+          },
+          {
+            "title": "Un Juego Nuevo y Otros Viejos",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/07-LEDO-Un%20Juego%20Nuevo%20y%20Otros%20Viejos-MONO-64k.mp3"
+          },
+          {
+            "title": "Bebé y el Señor Don Pomposo",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/08-LEDO-Bebé%20y%20el%20Señor%20Don%20Pomposo-MONO-64k.mp3"
+          },
+          {
+            "title": "La Última Página - Volumen I",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/09-LEDO-La_Última_Página_Volumen-I-MONO-64k.mp3"
+          }
         ]
       },
       {
-        "title": "Número 2",
-        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_is_2.png",
+        "title": "Volumen 2",
+        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo_2.png",
         "units": [
-          { "title": "La Historia del Hombre, contada por sus casas", "audioUrl": "https://syalia.com/parlantia/audiobooks/10-LEDO-La%20Historia%20del%20Hombre,%20Contada%20por%20Sus%20Casas-MONO-64k.mp3" }
+          {
+            "title": "La Historia del Hombre, contada por sus casas",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/10-LEDO-La%20Historia%20del%20Hombre,%20Contada%20por%20Sus%20Casas-MONO-64k.mp3"
+          },
+          {
+            "title": "Los Dos Príncipes",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/11-LEDO-Los%20Dos%20Príncipes-MONO-64k.mp3"
+          },
+          {
+            "title": "Nené Traviesa",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/12-LEDO-Nené%20Traviesa-MONO-64k.mp3"
+          },
+          {
+            "title": "La Perla de la Mora",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/13-LEDO-La%20Perla%20de%20la%20Mora-MONO-64k.mp3"
+          },
+          {
+            "title": "Las Ruinas Indias",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/14-LEDO-Las%20Ruinas%20Indias-MONO-64k.mp3"
+          },
+          {
+            "title": "Músicos, Poetas y Pintores",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/15-LEDO-Músicos,%20Poetas%20y%20Pintores-MONO-64k.mp3"
+          },
+          {
+            "title": "La_Última Página - Volumen II",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/16-LEDO-La_Última_Página_Volumen-II-MONO-64k.mp3"
+          }
+        ]
+      },
+      {
+        "title": "Volumen 3",
+        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo_3.png",
+        "units": [
+          {
+            "title": "La Exposición de París",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/17-LEDO-La%20Exposición%20de%20París-MONO-64k.mp3"
+          },
+          {
+            "title": "El Camarón Encantado",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/18-LEDO-El_Camarón_Encantado-MONO-64k.mp3"
+          },
+          {
+            "title": "El Padre de las Casas",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/19-LEDO-El%20Padre%20de%20las%20Casas-MONO-64k.mp3"
+          },
+          {
+            "title": "Los Zapaticos de Rosa",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/20-LEDO-Los%20Zapaticos%20de%20Rosa-MONO-64k.mp3"
+          },
+          {
+            "title": "La Última Página - Volumen III",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/21-LEDO-La_Última_Página_Volumen-III-MONO-64k.mp3"
+          }
+        ]
+      },
+      {
+        "title": "Volumen 4",
+        "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_e0_4.png",
+        "units": [
+          {
+            "title": "Un Paseo por la Tierra de los Anamitas",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/22-LEDO-Un_Paseo_por_la_Tierra_de_los_Anamitas-MONO-64k.mp3"
+          },
+          {
+            "title": "Historia de la Cuchara y el Tenedor",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/23-LEDO-Historia_de_la_Cuchara_y_el_Tenedor-MONO-64k.mp3"
+          },
+          {
+            "title": "La Muñeca Negra",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/24-LEDO-La_Muñeca_Negra-MONO-64k.mp3"
+          },
+          {
+            "title": "Cuentos de Elefantes",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/25-LEDO-Cuentos_de_Elefantes-MONO-64k.mp3"
+          },
+          {
+            "title": "Los Dos Ruiseñores",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/26-LEDO-Los_Dos_Ruiseñores-MONO-64k.mp3"
+          },
+          {
+            "title": "La Galería de las Máquinas",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/27-LEDO-La_Galería_de_las_Máquinas-MONO-64k.mp3"
+          },
+          {
+            "title": "La Última Página - Volumen IV",
+            "audioUrl": "https://syalia.com/parlantia/audiobooks/28-LEDO-La_Última_Página_Volumen-IV-MONO-64k.mp3"
+          }
         ]
       }
     ]
