@@ -27,8 +27,8 @@ header {
     background-color: var(--brand-cream);  /* Blanco al 85% de opacidad */
     backdrop-filter: blur(12px); /* El desenfoque mágico */
     -webkit-backdrop-filter: blur(12px); /* Soporte obligatorio para iPhones/Safari */
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
+    text-align: left;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -39,7 +39,7 @@ header {
     max-height: 60px; /* Ajusta la altura máxima del logo según prefieras */
     width: auto; /* Mantiene la proporción de aspecto */
     display: inline-block; /* Asegura que se centre correctamente */
-    margin: 0 auto; /* Centrado adicional */
+    margin: 0 ; /* Centrado adicional */
 }
 
 #app-title {
