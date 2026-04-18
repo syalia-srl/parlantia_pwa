@@ -132,6 +132,7 @@ function showTab(id) {
             handleSearch({ target: { value: input.value } });
         }
     }
+    syncOfflineUI();
 }
 
 function refreshActiveViews() {
@@ -160,6 +161,7 @@ function refreshActiveViews() {
     }
 
     updatePlayerButtons();
+    syncOfflineUI();
 }
 
 function handleSearch(e) {
@@ -192,6 +194,7 @@ function handleSearch(e) {
     }).join('');
 
     markOfflineTracks();
+    syncOfflineUI();    
 }
 
 function renderRow(title, url) {
@@ -208,7 +211,7 @@ function renderRow(title, url) {
                 </div>
             </div>
             <div style="display:flex; gap:8px;">
-                <button class="btn-small" onclick="playFromCatalog('${url}','${title}')">▶️</button>
+                <button class="btn-small play-btn-smart" data-url="${url}" onclick="playFromCatalog('${url}','${title}')">▶️</button>
                 <button class="btn-small" onclick="addToPlaylist('${title}','${url}')">➕</button>
             </div>
         </div>`;
@@ -372,6 +375,7 @@ window.showBookDetail = (id) => {
 
     detail.innerHTML = html;
     markOfflineTracks();
+    syncOfflineUI();
 };
 
 function closeBookDetail() {
@@ -386,6 +390,7 @@ function closeBookDetail() {
 
     document.getElementById('library-grid-container').style.display = 'block';
     renderLibrary(); // Refrescar para asegurar que el orden y filtros se apliquen
+    syncOfflineUI();
 }
 
 function addToLibrary(id) {
@@ -456,7 +461,7 @@ function renderPlaylist() {
         const trackId = getSafeHashId(t.url); 
 
         container.innerHTML += `
-        <div class="playlist-item ${active ? 'active' : ''}" draggable="true" ondragstart="dragStart(event, ${i})" ondragover="dragOver(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragend="dragEnd(event)" ondrop="drop(event, ${i})">
+        <div class="playlist-item ${active ? 'active' : ''}" data-id="${t.id}" draggable="true" ondragstart="dragStart(event, ${i})" ondragover="dragOver(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)" ondragend="dragEnd(event)" ondrop="drop(event, ${i})">
             <div style="cursor:grab; font-size:1.4rem; color:var(--text-muted); padding-right:10px;">⋮⋮</div>
             <div style="flex:1; min-width:0;">
                 <span style="display:block; font-weight:${active ? '700' : '500'}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${t.title}</span>
@@ -466,7 +471,7 @@ function renderPlaylist() {
             </div>
             
             <div style="display:flex; gap:10px; align-items:center;">
-                <button class="btn-small" 
+                <button class="btn-small play-btn-smart" data-url="${t.url}"
                         style="background:none; border:none; padding:0; font-size:1.2rem; cursor:pointer;" 
                         onclick="playTrack('${t.url}', '${t.title}', '${t.id}')">
                     ▶️
@@ -620,7 +625,22 @@ function playTrack(url, title, queueId = null) {
     audio.play().catch(e => console.warn("Esperando interacción:", e));
 
     togglePlayIcons(true);
-    refreshActiveViews();
+    // refreshActiveViews();
+
+    document.querySelectorAll('.playlist-item').forEach(el => {
+        const isCurrent = el.getAttribute('data-id') === queueId;
+        
+        // Mover la clase active
+        el.classList.toggle('active', isCurrent);
+        
+        // Ajustar el peso de la fuente del título (como estaba en el render)
+        const titleSpan = el.querySelector('span');
+        if (titleSpan) titleSpan.style.fontWeight = isCurrent ? '700' : '500';
+    });
+
+    // 2. Actualizar solo lo necesario
+    updatePlayerButtons(); 
+    if (typeof syncOfflineUI === 'function') syncOfflineUI();
 
     // 4. EL PORTERO: ¿Hay que descargar o ya lo tenemos?
     caches.match(url).then(async (res) => {
@@ -933,6 +953,60 @@ function playFromCatalog(url, title) {
     showToast("Reproduciendo y añadido a tu lista");
     refreshActiveViews();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadCatalog();
+    initPlayerEvents();
+    restorePlayerState();
+    showTab('playlist');
+    syncOfflineUI(); // <- AÑADIR AQUÍ
+});
+
+// ==========================================
+// CEREBRO OFFLINE-FIRST (INDICADOR Y BLOQUEO VISUAL)
+// ==========================================
+async function syncOfflineUI() {
+    const isOffline = !navigator.onLine;
+    
+    // 1. Actualizar Indicador Visual
+    const dot = document.getElementById('network-dot');
+    const text = document.getElementById('network-text');
+    if (dot) dot.style.background = isOffline ? '#d32f2f' : '#4CAF50';
+    if (text) text.innerText = isOffline ? 'Offline' : 'Online';
+
+    // 2. Escanear y Bloquear Botones
+    const buttons = document.querySelectorAll('.play-btn-smart');
+    if (!buttons.length) return;
+
+    try {
+        const cache = await caches.open('parlantia-audio-v6');
+        const keys = await cache.keys();
+        const cachedUrls = keys.map(k => {
+            try { return decodeURIComponent(k.url); } catch(e) { return k.url; }
+        });
+
+        buttons.forEach(btn => {
+            const url = btn.getAttribute('data-url');
+            if (!isOffline) {
+                btn.disabled = false;
+                btn.style.opacity = "1";
+                btn.style.cursor = "pointer";
+            } else {
+                let fName = url.split('/').pop().split('?')[0];
+                try { fName = decodeURIComponent(url).split('/').pop().split('?')[0]; } catch(e){}
+                
+                const isCached = cachedUrls.some(c => c.includes(fName));
+                btn.disabled = !isCached;
+                btn.style.opacity = isCached ? "1" : "0.3";
+                btn.style.cursor = isCached ? "pointer" : "not-allowed";
+            }
+        });
+    } catch (e) { console.warn("Error en sincronización offline", e); }
+}
+
+// Escuchas globales de red
+window.addEventListener('online', syncOfflineUI);
+window.addEventListener('offline', syncOfflineUI);
 
 if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('sw.js')); }
 
