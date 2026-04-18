@@ -14,7 +14,20 @@
     "units": [
       { "title": "Dedicatoria", "audioUrl": "https://syalia.com/parlantia/audiobooks/00-ISM-Dedicatoria-MONO-64k.mp3" },
       { "title": "Príncipe Enano", "audioUrl": "https://syalia.com/parlantia/audiobooks/01-ISM-Príncipe_Enano-MONO-64k.mp3" },
-      { "title": "Sueño Despierto", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-ISM-Sueño_Despierto-MONO-64k.mp3" }
+      { "title": "Sueño Despierto", "audioUrl": "https://syalia.com/parlantia/audiobooks/02-ISM-Sueño_Despierto-MONO-64k.mp3" },
+      { "title": "Brazos Fragantes", "audioUrl": "https://syalia.com/parlantia/audiobooks/03-ISM-Brazos_Fragantes-MONO-64k.mp3" },
+      { "title": "Mi Caballero", "audioUrl": "https://syalia.com/parlantia/audiobooks/04-ISM-Mi_Caballero-MONO-64k.mp3" },
+      { "title": "Musa Traviesa", "audioUrl": "https://syalia.com/parlantia/audiobooks/05-ISM-Musa_Traviesa-MONO-64k.mp3" },
+      { "title": "Mi Reyecillo", "audioUrl": "https://syalia.com/parlantia/audiobooks/06-ISM-Mi_Reyecillo-MONO-64k.mp3" },
+      { "title": "Penachos Vívidos", "audioUrl": "https://syalia.com/parlantia/audiobooks/07-ISM-Penachos_Vívidos-MONO-64k.mp3" },
+      { "title": "Hijo del Alma", "audioUrl": "https://syalia.com/parlantia/audiobooks/08-ISM-Hijo_del_alma-MONO-64k.mp3" },
+      { "title": "Amor Errante", "audioUrl": "https://syalia.com/parlantia/audiobooks/09-ISM-Amor_Errante-MONO-64k.mp3" },
+      { "title": "Sobre mi Hombro", "audioUrl": "https://syalia.com/parlantia/audiobooks/10-ISM-Sobre_mi_Hombro-MONO-64k.mp3" },
+      { "title": "Tábanos Fieros", "audioUrl": "https://syalia.com/parlantia/audiobooks/11-ISM-Tábanos_Fieros-MONO-64k.mp3" },
+      { "title": "Tórtola Blanca", "audioUrl": "https://syalia.com/parlantia/audiobooks/12-ISM-Tórtola_Blanca-MONO-64k.mp3" },
+      { "title": "Valle Lozano", "audioUrl": "https://syalia.com/parlantia/audiobooks/13-ISM-Valle_Lozano-MONO-64k.mp3" },
+      { "title": "Mi Despensero", "audioUrl": "https://syalia.com/parlantia/audiobooks/14-ISM-Mi_Despensero-MONO-64k.mp3" },
+      { "title": "Rosilla Nueva", "audioUrl": "https://syalia.com/parlantia/audiobooks/15-ISM-Rosilla_Nueva-MONO-64k.mp3" }
     ]
   },
   {
