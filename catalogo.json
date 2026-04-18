@@ -281,7 +281,7 @@
     "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo.jpg",
     "parts": [
       {
-        "title": "Volumen 1",
+        "title": "Volumen I",
         "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo_1.png",
         "units": [
           {
@@ -323,7 +323,7 @@
         ]
       },
       {
-        "title": "Volumen 2",
+        "title": "Volumen II",
         "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo_2.png",
         "units": [
           {
@@ -351,13 +351,13 @@
             "audioUrl": "https://syalia.com/parlantia/audiobooks/15-LEDO-Músicos,%20Poetas%20y%20Pintores-MONO-64k.mp3"
           },
           {
-            "title": "La_Última Página - Volumen II",
+            "title": "La Última Página - Volumen II",
             "audioUrl": "https://syalia.com/parlantia/audiobooks/16-LEDO-La_Última_Página_Volumen-II-MONO-64k.mp3"
           }
         ]
       },
       {
-        "title": "Volumen 3",
+        "title": "Volumen III",
         "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_eo_3.png",
         "units": [
           {
@@ -383,7 +383,7 @@
         ]
       },
       {
-        "title": "Volumen 4",
+        "title": "Volumen IV",
         "coverUrl": "https://syalia.com/parlantia/audiobooks/portada_e0_4.png",
         "units": [
           {
