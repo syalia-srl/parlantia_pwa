@@ -31,13 +31,21 @@ registerRoute(
     })
 );
 
-// INTERFAZ Y RECURSOS EXTERNOS (Corregido para carátulas remotas sin latencia)
 registerRoute(
-    ({ request }) => ['document', 'script', 'style', 'image'].includes(request.destination),
+    ({ request }) => ['document', 'script', 'style'].includes(request.destination),
+    new NetworkFirst({ 
+        cacheName: 'parlantia-app-shell',
+        networkTimeoutSeconds: 3 // Si en 3 seg no hay red buena, carga offline al toque
+    })
+);
+
+// 2. LAS IMÁGENES -> CacheFirst
+// Las carátulas pesan mucho y cambian poco, se quedan en caché blindado.
+registerRoute(
+    ({ request }) => request.destination === 'image',
     new CacheFirst({ 
-        cacheName: 'parlantia-assets-v6',
+        cacheName: 'parlantia-images-v6',
         plugins: [
-            // El status 0 es vital para cachear imágenes de syalia.com (CORS opaco)
             new CacheableResponsePlugin({ statuses: [0, 200] }), 
             new ExpirationPlugin({ maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 30 })
         ],
