@@ -1011,58 +1011,55 @@ window.addEventListener('offline', syncOfflineUI);
 
 // --- LÓGICA DE INSTALACIÓN PROMOCIONAL ---
 
-// A. Caso Android/Chrome: Capturamos el evento técnico
+// --- LÓGICA DE INSTALACIÓN CONTROLADA POR PARÁMETRO ---
+
+// 1. Capturamos el evento técnico, pero lo guardamos en silencio
 window.addEventListener('beforeinstallprompt', (e) => {
-    // 1. Siempre capturamos el evento por si acaso
     e.preventDefault();
     deferredPrompt = e;
-
-    // 2. SOLO si existe el parámetro, disparamos la acción
+    
+    // Solo si el usuario vino por el link de promo, lanzamos la invitación
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('action') === 'install') {
-        triggerAndroidInstall();
+        showInstallationInvitation();
     }
 });
 
-async function triggerAndroidInstall() {
-    if (!deferredPrompt) return;
-    
-    // Lanzamos el cartel nativo de Google
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    
-    if (outcome === 'accepted') {
-        showToast("¡Gracias por instalar Parlantia!");
-    }
-    deferredPrompt = null;
-}
-
-// B. Caso iOS/Safari: Instrucciones manuales
-function checkIOSInstallIntent() {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Condición estricta: Solo si hay parámetro Y es iOS
-    const isInstallIntent = urlParams.get('action') === 'install';
+// 2. Función que muestra tu modal como "puente" (Gesto del Usuario)
+function showInstallationInvitation() {
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
 
-    if (isInstallIntent && isIOS && !isStandalone) {
-        // Usamos tu propio motor de modal ya definido en app.js
+    // Si ya está instalada, no molestamos
+    if (isStandalone) return;
+
+    if (isIOS) {
+        // Caso iOS: Instrucciones manuales
         showParlantiaModal(
-            "Instalar en iPhone",
-            "Para instalar: toca el icono de 'Compartir' (el cuadro con la flecha) y selecciona 'Añadir a pantalla de inicio'.",
+            "Instalar Parlantia",
+            "Para una mejor experiencia en iPhone: toca el icono de 'Compartir' y selecciona 'Añadir a pantalla de inicio'.",
             "Entendido",
-            false, // Botón naranja (no destructivo)
-            () => { console.log("Instrucciones de iOS mostradas"); }
+            false,
+            () => { /* Solo cerrar */ }
+        );
+    } else if (deferredPrompt) {
+        // Caso Android/Chrome PC: Invitación para disparar el prompt nativo
+        showParlantiaModal(
+            "Descargar Aplicación",
+            "¿Quieres instalar Parlantia en tu dispositivo para escuchar tus audiolibros sin conexión?",
+            "Instalar ahora",
+            false,
+            () => {
+                // Al hacer clic aquí, ya tenemos el "Gesto del Usuario" válido
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choice) => {
+                    if (choice.outcome === 'accepted') showToast("¡Instalación iniciada!");
+                    deferredPrompt = null;
+                });
+            }
         );
     }
 }
-
-// C. Ejecución al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    // ... tus otras funciones (loadCatalog, etc.)
-    checkIOSInstallIntent();
-});
 
 if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('sw.js')); }
 
