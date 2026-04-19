@@ -21,6 +21,7 @@ let myLibraryBooks = JSON.parse(localStorage.getItem('parlantia_library')) || []
 let sleepTimerId = null;
 let currentViewedBookId = null; // Para saber qué libro estamos mirando
 let activeDownloads = {};
+let deferredPrompt;
 
 myList.forEach(item => { if (!item.id) item.id = generateQueueId(); });
 
@@ -1007,6 +1008,61 @@ async function syncOfflineUI() {
 // Escuchas globales de red
 window.addEventListener('online', syncOfflineUI);
 window.addEventListener('offline', syncOfflineUI);
+
+// --- LÓGICA DE INSTALACIÓN PROMOCIONAL ---
+
+// A. Caso Android/Chrome: Capturamos el evento técnico
+window.addEventListener('beforeinstallprompt', (e) => {
+    // 1. Siempre capturamos el evento por si acaso
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // 2. SOLO si existe el parámetro, disparamos la acción
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('action') === 'install') {
+        triggerAndroidInstall();
+    }
+});
+
+async function triggerAndroidInstall() {
+    if (!deferredPrompt) return;
+    
+    // Lanzamos el cartel nativo de Google
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    
+    if (outcome === 'accepted') {
+        showToast("¡Gracias por instalar Parlantia!");
+    }
+    deferredPrompt = null;
+}
+
+// B. Caso iOS/Safari: Instrucciones manuales
+function checkIOSInstallIntent() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Condición estricta: Solo si hay parámetro Y es iOS
+    const isInstallIntent = urlParams.get('action') === 'install';
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+
+    if (isInstallIntent && isIOS && !isStandalone) {
+        // Usamos tu propio motor de modal ya definido en app.js
+        showParlantiaModal(
+            "Instalar en iPhone",
+            "Para instalar: toca el icono de 'Compartir' (el cuadro con la flecha) y selecciona 'Añadir a pantalla de inicio'.",
+            "Entendido",
+            false, // Botón naranja (no destructivo)
+            () => { console.log("Instrucciones de iOS mostradas"); }
+        );
+    }
+}
+
+// C. Ejecución al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    // ... tus otras funciones (loadCatalog, etc.)
+    checkIOSInstallIntent();
+});
 
 if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('sw.js')); }
 
